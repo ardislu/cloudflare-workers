@@ -82,4 +82,4 @@ This reverse proxy embeds Instagram posts so they can be viewed without logging 
 
 ### Usage
 
-Same as `reverse-proxy`, but it will only work on instagram URLs in the format: `https://www.instagram.com/p/{POST_ID}/`.
+Same as `proxy`, but it will only work on instagram URLs in the format: `https://www.instagram.com/p/{POST_ID}/`.
