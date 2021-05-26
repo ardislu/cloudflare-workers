@@ -1,0 +1,22 @@
+{
+  "name": "proxy",
+  "version": "0.1.0",
+  "description": "This is a minimal, basic reverse proxy.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "login": "wrangler login",
+    "preview": "wrangler preview",
+    "build": "wrangler build",
+    "publish": "wrangler publish"
+  },
+  "author": "Ardis Lu",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/wrangler": "^1.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardislu/cloudflare-workers.git"
+  }
+}
