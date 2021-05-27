@@ -1,8 +1,9 @@
 {
-  "name": "cloudflare-workers",
+  "name": "cors",
   "version": "0.1.0",
-  "description": "Monorepo for my personal Cloudflare Workers.",
+  "description": "This reverse proxy injects permissive CORS response headers to a response.",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "login": "wrangler login",
     "preview": "wrangler preview",
@@ -17,10 +18,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ardislu/cloudflare-workers.git"
-  },
-  "workspaces": [
-    "proxy",
-    "instagram",
-    "cors"
-  ]
+  }
 }

@@ -83,3 +83,11 @@ This reverse proxy embeds Instagram posts so they can be viewed without logging 
 ### Usage
 
 Same as `proxy`, but it will only work on instagram URLs in the format: `https://www.instagram.com/p/{POST_ID}/`.
+
+## cors
+
+This reverse proxy injects permissive CORS response headers to a response. Useful to use APIs that have not enabled CORS.
+
+### Usage
+
+Same as `proxy`.
