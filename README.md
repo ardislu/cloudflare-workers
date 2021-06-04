@@ -91,3 +91,22 @@ This reverse proxy injects permissive CORS response headers to a response. Usefu
 ### Usage
 
 Same as `proxy`.
+
+## pwned
+
+Checks a password against the [have i been pwned?](https://haveibeenpwned.com/) API and returns a boolean indicating if the password has been pwned or not. This is a simplified re-implementation of the [Pwned Passwords Cloudflare Worker](https://github.com/HaveIBeenPwned/PwnedPasswordsCloudflareWorker).
+
+### Usage
+
+Pass a plaintext password as the entire query string to the endpoint. For example, if your Cloudflare Worker domain is 
+```
+https://x.y.workers.dev
+```
+and the password you want to check is
+```
+hunter1
+```
+then the final request URL should be
+```
+https://x.y.workers.dev?hunter1
+```
