@@ -1,2 +1,5 @@
 node_modules
 wrangler.toml
+dist
+worker
+.install.lock
