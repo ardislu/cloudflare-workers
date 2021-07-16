@@ -3,3 +3,4 @@ wrangler.toml
 dist
 worker
 .install.lock
+*/package-lock.json
