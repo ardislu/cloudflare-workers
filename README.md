@@ -41,7 +41,7 @@ Or test an individual Worker:
 npm run preview --workspace=[Cloudflare Worker name]
 ```
 
-7. Publish all the Workers to Cloudflare
+7. Publish all the Workers to Cloudflare:
 ```
 npm run publish --workspaces
 ```
