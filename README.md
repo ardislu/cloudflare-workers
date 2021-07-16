@@ -51,6 +51,10 @@ Or publish an individual Worker:
 npm run publish --workspace=[Cloudflare Worker name]
 ```
 
+# Limitations
+
+There are [some permission issues](https://github.com/cloudflare/wrangler/issues/240) when installing `wrangler` as a dependency in an npm workspace. As a workaround, I've made `wrangler` a dependency in the top-level `package.json` for the overall monorepo, and omitted `wrangler` from the dependencies for each workspace. That means that **the npm scripts in each workspace depend on `wrangler` being installed outside of the workspace**. So if you wanted to pull a workspace out of the monorepo and run the workspace on its own, you must re-add `wrangler` to the workspace dependencies first.
+
 # Workers
 
 ## proxy
