@@ -114,3 +114,11 @@ then the final request URL should be
 ```
 https://x.y.workers.dev?hunter1
 ```
+
+## qr
+
+Generates a QR code for the value passed to the endpoint. Note: set the `type` property in `wrangler.toml` to `webpack` to use `require`.
+
+### Usage
+
+Same as `proxy`.

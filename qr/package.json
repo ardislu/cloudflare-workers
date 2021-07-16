@@ -1,8 +1,9 @@
 {
-  "name": "cloudflare-workers",
+  "name": "qr",
   "version": "0.1.0",
-  "description": "Monorepo for my personal Cloudflare Workers.",
+  "description": "QR code generator on a Cloudflare Worker.",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "login": "wrangler login",
     "preview": "wrangler preview",
@@ -11,18 +12,11 @@
   },
   "author": "Ardis Lu",
   "license": "ISC",
-  "devDependencies": {
-    "@cloudflare/wrangler": "^1.16.1"
+  "dependencies": {
+    "qr-image": "^3.2.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ardislu/cloudflare-workers.git"
-  },
-  "workspaces": [
-    "proxy",
-    "instagram",
-    "cors",
-    "pwned",
-    "qr"
-  ]
+  }
 }
