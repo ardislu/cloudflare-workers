@@ -21,17 +21,12 @@ npm i
 npm run login
 ```
 
-4. Set `account_id` in `wrangler.toml.example`:
+4. For each Cloudflare Worker, make a copy of `wrangler.toml.example` and rename it to `wrangler.toml`. Set `account_id` in `wrangler.toml`:
 ```
 account_id = [Account ID value from login]
 ```
 
-5. For each Cloudflare Worker, make a copy of `wrangler.toml.example` and rename it to `wrangler.toml`. Put `wrangler.toml` in the folder for each worker. Set the Cloudflare Worker name in the copied `wrangler.toml`:
-```
-name = [Cloudflare Worker name]
-```
-
-6. Test that all Cloudflare Workers work:
+5. Test that all Cloudflare Workers work:
 ```
 npm run preview --workspaces
 ```
@@ -41,7 +36,7 @@ Or test an individual Worker:
 npm run preview --workspace=[Cloudflare Worker name]
 ```
 
-7. Publish all the Workers to Cloudflare:
+6. Publish all the Workers to Cloudflare:
 ```
 npm run publish --workspaces
 ```
