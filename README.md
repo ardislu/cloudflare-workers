@@ -117,3 +117,21 @@ Generates a QR code for the value passed to the endpoint. Note: set the `type` p
 ### Usage
 
 Same as `proxy`.
+
+## ip
+
+Returns the requester's IP address. Uses the [Cloudflare header](https://developers.cloudflare.com/workers/runtime-apis/headers#cloudflare-headers) `CF-Connecting-IP` to get this value. Inspired by and works like [ifconfig.me](https://ifconfig.me) and [ifconfig.co](https://ifconfig.co).
+
+### Usage
+
+In bash:
+```
+curl https://x.y.workers.dev
+> <your IP address>
+```
+
+In PowerShell:
+```
+(Invoke-WebRequest https://x.y.workers.dev).Content
+> <your IP address>
+```
