@@ -135,3 +135,21 @@ In PowerShell:
 (Invoke-WebRequest https://x.y.workers.dev).Content
 > <your IP address>
 ```
+
+## uuid
+
+Returns a random version 4 UUID.
+
+### Usage
+
+In bash:
+```
+curl https://x.y.workers.dev
+> <random v4 UUID>
+```
+
+In PowerShell:
+```
+(Invoke-WebRequest https://x.y.workers.dev).Content
+> <random v4 UUID>
+```
