@@ -1,0 +1,5 @@
+name = 'uuid'
+type = 'javascript'
+account_id = ''
+workers_dev = true
+route = 'example.com/*'
