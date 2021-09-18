@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "login": "wrangler login",
+    "dev": "wrangler dev",
     "preview": "wrangler preview",
     "build": "wrangler build",
     "publish": "wrangler publish"
