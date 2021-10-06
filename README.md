@@ -153,3 +153,33 @@ In PowerShell:
 (Invoke-WebRequest https://x.y.workers.dev).Content
 > <random v4 UUID>
 ```
+
+## hash
+
+Returns the hash of a string using the [crypto web API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest).
+
+### Usage
+
+In bash:
+```
+curl https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21
+> 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
+```
+
+In PowerShell:
+```
+(Invoke-WebRequest https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21).Content
+> 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
+```
+
+### `algorithm`
+
+Supported values are:
+- `SHA-1`
+- `SHA-256`
+- `SHA-384`
+- `SHA-512`
+
+### `query` (alias `q`)
+
+The string you want to get the hash of.
