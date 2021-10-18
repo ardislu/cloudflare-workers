@@ -183,3 +183,11 @@ Supported values are:
 ### `query` (alias `q`)
 
 The string you want to get the hash of.
+
+## style
+
+Reverse proxy which injects a basic CSS style sheet.
+
+### Usage
+
+Same as `proxy`.
