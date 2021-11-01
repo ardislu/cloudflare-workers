@@ -191,3 +191,11 @@ Reverse proxy which injects a basic CSS style sheet.
 ### Usage
 
 Same as `proxy`.
+
+## unroll
+
+Redirects a tweet thread to the corresponding Threadreader thread.
+
+### Usage
+
+Same as `proxy`, but only works on tweet URLs.

@@ -1,8 +1,9 @@
 {
-  "name": "cloudflare-workers",
+  "name": "unroll",
   "version": "0.1.0",
-  "description": "Monorepo for my personal Cloudflare Workers.",
+  "description": "Redirects a tweet thread to the corresponding Threadreader thread.",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "login": "wrangler login",
     "dev": "wrangler dev",
@@ -12,22 +13,8 @@
   },
   "author": "Ardis Lu",
   "license": "ISC",
-  "devDependencies": {
-    "@cloudflare/wrangler": "^1.16.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ardislu/cloudflare-workers.git"
-  },
-  "workspaces": [
-    "proxy",
-    "instagram",
-    "cors",
-    "pwned",
-    "qr",
-    "ip",
-    "uuid",
-    "style",
-    "unroll"
-  ]
+  }
 }
