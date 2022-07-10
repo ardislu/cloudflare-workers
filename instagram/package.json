@@ -2,6 +2,8 @@
   "name": "instagram",
   "version": "0.1.0",
   "description": "This reverse proxy embeds Instagram posts so they can be viewed without logging in.",
+  "license": "ISC",
+  "author": "Ardis Lu",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -11,8 +13,6 @@
     "build": "wrangler build",
     "publish": "wrangler publish"
   },
-  "author": "Ardis Lu",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/ardislu/cloudflare-workers.git"

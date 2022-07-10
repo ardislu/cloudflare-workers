@@ -2,6 +2,8 @@
   "name": "proxy",
   "version": "0.1.0",
   "description": "This is a minimal, basic reverse proxy.",
+  "license": "ISC",
+  "author": "Ardis Lu",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -11,8 +13,6 @@
     "build": "wrangler build",
     "publish": "wrangler publish"
   },
-  "author": "Ardis Lu",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/ardislu/cloudflare-workers.git"

@@ -2,6 +2,8 @@
   "name": "qr",
   "version": "0.1.0",
   "description": "QR code generator on a Cloudflare Worker.",
+  "license": "ISC",
+  "author": "Ardis Lu",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -11,8 +13,6 @@
     "build": "wrangler build",
     "publish": "wrangler publish"
   },
-  "author": "Ardis Lu",
-  "license": "ISC",
   "dependencies": {
     "qr-image": "^3.2.0"
   },

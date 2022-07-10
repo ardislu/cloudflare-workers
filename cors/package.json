@@ -2,6 +2,8 @@
   "name": "cors",
   "version": "0.1.0",
   "description": "This reverse proxy injects permissive CORS response headers to a response.",
+  "license": "ISC",
+  "author": "Ardis Lu",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -11,8 +13,6 @@
     "build": "wrangler build",
     "publish": "wrangler publish"
   },
-  "author": "Ardis Lu",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/ardislu/cloudflare-workers.git"
