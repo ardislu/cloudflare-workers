@@ -27,6 +27,7 @@
     "qr",
     "ip",
     "uuid",
+    "hash",
     "style",
     "unroll"
   ]
