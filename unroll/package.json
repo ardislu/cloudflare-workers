@@ -1,16 +1,12 @@
 {
   "name": "unroll",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Redirects a tweet thread to the corresponding Threadreader thread.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
-  "main": "index.js",
   "scripts": {
-    "login": "wrangler login",
     "dev": "wrangler dev",
-    "preview": "wrangler preview",
-    "build": "wrangler build",
     "publish": "wrangler publish"
   },
   "repository": {

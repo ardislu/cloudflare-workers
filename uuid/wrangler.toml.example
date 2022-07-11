@@ -1,5 +1,3 @@
 name = 'uuid'
-type = 'javascript'
-account_id = ''
-workers_dev = true
+main = 'index.js'
 route = 'example.com/*'

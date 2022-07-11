@@ -1,9 +1,9 @@
-const qr = require('qr-image');
+import QRCode from 'qrcode';
 
 async function handleRequest(request) {
   const url = new URL(request.url);
   const queryString = decodeURIComponent(url.search.substring(1));
-  const qrImage = qr.imageSync(queryString || 'https://example.com', { type: 'svg' });
+  const qrImage = await QRCode.toString(queryString || 'https://example.com', { type: 'svg' });
 
   return new Response(qrImage, {
     headers: {

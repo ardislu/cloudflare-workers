@@ -1,19 +1,16 @@
 {
   "name": "cloudflare-workers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Monorepo for my personal Cloudflare Workers.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
-    "login": "wrangler login",
     "dev": "wrangler dev",
-    "preview": "wrangler preview",
-    "build": "wrangler build",
     "publish": "wrangler publish"
   },
   "devDependencies": {
-    "@cloudflare/wrangler": "^1.16.1"
+    "wrangler": "^2.0.16"
   },
   "repository": {
     "type": "git",
