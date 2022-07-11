@@ -1,3 +1,4 @@
 name = 'ip'
 main = 'index.js'
+compatibility_date = '2022-07-10'
 route = 'example.com/*'
