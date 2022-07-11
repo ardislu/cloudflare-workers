@@ -1,3 +1,5 @@
-addEventListener('fetch', event => {
-  event.respondWith(new Response(crypto.randomUUID()));
-})
+export default {
+  async fetch(request) {
+    return new Response(crypto.randomUUID());
+  }
+}

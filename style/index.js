@@ -4,14 +4,12 @@ class InjectStyle {
   }
 }
 
-async function handleRequest(request) {
-  const url = new URL(request.url);
-  const queryString = decodeURIComponent(url.search.substring(1));
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const queryString = decodeURIComponent(url.search.substring(1));
 
-  const response = await fetch(queryString);
-  return new HTMLRewriter().on('html', new InjectStyle()).transform(response);
+    const response = await fetch(queryString);
+    return new HTMLRewriter().on('html', new InjectStyle()).transform(response);
+  }
 }
-
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
-})
