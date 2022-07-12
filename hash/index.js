@@ -1,15 +1,26 @@
 export default {
   async fetch(request) {
     const url = new URL(request.url);
-    let algorithm = 'SHA-256';
-    let query = 'Example string';
+    let algorithm;
+    let query;
+
+    // Parse URLSearchParams
     for (const [key, value] of url.searchParams) {
-      if (key.toLowerCase() === 'algorithm' && ['SHA-1', 'SHA-256', 'SHA-384', 'SHA-512'].includes(value.toUpperCase())) {
-        algorithm = value;
+      const normalizedKey = key.toLowerCase();
+      if ((normalizedKey === 'a' || normalizedKey === 'algorithm') && /^SHA-?(1|256|384|512)$/i.test(value)) {
+        algorithm = value.includes('-') ? value : `SHA-${value.slice(3)}`; // Insert a '-' character if it's not present; crypto.subtle.digest() requires it.
       }
-      else if ((key.toLowerCase() === 'q' || key.toLowerCase() === 'query') && value) { // Intentionally excluding falsy values and not just null because empty strings are no good
+      else if ((normalizedKey === 'q' || normalizedKey === 'query') && value) { // Intentionally fail for falsy values because a null or empty string is also invalid
         query = value;
       }
+    }
+
+    // Handling bad params
+    if (algorithm === undefined) {
+      return new Response('Invalid algorithm provided. Provide one of the following values for the parameter "a" or "algorithm": SHA-1, SHA-256, SHA-384, or SHA-512.', { status: 400 });
+    }
+    else if (query === undefined) {
+      return new Response('Invalid query provided. Provide a value for the parameter "q" or "query".', { status: 400 });
     }
 
     // Convert query string to byte array and hash it, then convert hashed byte array to hex string
