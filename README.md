@@ -202,7 +202,7 @@ In PowerShell:
 ## hash
 
 Returns the hash of a string using the
-[crypto web API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest).
+[Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest).
 
 In bash:
 
