@@ -57,92 +57,108 @@ the workspace dependencies first.
 
 # Workers
 
+All examples assume that the worker has been deployed at
+**`https://x.y.workers.dev`**.
+
+<h1 align="center">Reverse Proxies</h1>
+
 ## proxy
 
-This is a minimal, basic reverse proxy.
+This is a minimal, basic reverse proxy. Proxy any request through the Cloudflare
+Worker by passing the **entire** URL as a query string to the Cloudflare Worker.
 
-### Usage
-
-Proxy any request through the Cloudflare Worker by passing the **entire** URL as
-a query string to the Cloudflare Worker. So if your Cloudflare Worker domain is
-
-```
-https://x.y.workers.dev
-```
-
-and the request you want to proxy is
+For example, if the request you want to proxy is:
 
 ```
 https://api.example.com?param1=test1&param2=test2
 ```
 
-then the final request URL should be
+then the final request URL should be:
 
 ```
 https://x.y.workers.dev?https://api.example.com?param1=test1&param2=test2
 ```
 
-### Caching
-
-For simplicity, this code does not configure the `cf` headers on the `fetch`
+For simplicity, this worker does not configure the `cf` headers on the `fetch`
 request that is sent to the Cloudflare proxy. Set the `cf` request headers to
 configure the Cloudflare Worker's behavior on caching. See:
 [Cache using fetch](https://developers.cloudflare.com/workers/examples/cache-using-fetch).
 
-## instagram
-
-This reverse proxy embeds Instagram posts so they can be viewed without logging
-in.
-
-### Usage
-
-Same as `proxy`, but it will only work on instagram URLs in the format:
-`https://www.instagram.com/p/{POST_ID}/`.
-
 ## cors
 
-This reverse proxy injects permissive CORS response headers to a response.
-Useful to use APIs that have not enabled CORS.
+This reverse proxy injects permissive
+[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) response headers
+to a response. Useful for using APIs that have not enabled CORS.
 
-### Usage
+```
+https://x.y.workers.dev?https://api-with-unconfigured-cors.example.com?param1=test1&param2=test2
+```
 
-Same as `proxy`.
+## style
+
+This reverse proxy injects a basic CSS style sheet to a page's `<head>` and
+returns the result. Good for quickly "upgrading" old/minimalist web pages with
+no styling.
+
+```
+https://x.y.workers.dev?https://site-with-no-styles.example.com
+```
+
+<h1 align="center">Web Utilities</h1>
+
+## qr
+
+Generates a SVG file representing a QR code for the value passed to the
+endpoint.
+
+```
+https://x.y.workers.dev?https://example.com
+> (The SVG file rendered below)
+```
+
+<svg height="200px" viewBox="0 0 33 33"><path fill="#ffffff" d="M0 0h33v33H0z"/><path stroke="#000000" d="M4 4.5h7m4 0h3m2 0h1m1 0h7M4 5.5h1m5 0h1m3 0h1m2 0h4m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m1 0h1m4 0h3m2 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h3m2 0h1m2 0h1m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m1 0h1m2 0h1m2 0h2m2 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 11.5h1m5 0h1m1 0h1M4 12.5h1m1 0h5m5 0h1m5 0h5M5 13.5h1m2 0h2m2 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1M4 14.5h5m1 0h1m1 0h2m3 0h4m2 0h1m1 0h1m1 0h2M4 15.5h2m1 0h3m2 0h1m1 0h2m1 0h1m1 0h2m1 0h2m4 0h1M5 16.5h3m2 0h1m4 0h2m1 0h2m1 0h2m1 0h1m1 0h3M4 17.5h5m3 0h1m1 0h1m5 0h1m2 0h1m1 0h1m1 0h1M4 18.5h1m5 0h2m2 0h3m2 0h1m2 0h4m1 0h2M4 19.5h1m2 0h1m3 0h1m3 0h1m2 0h7m3 0h1M4 20.5h1m1 0h1m2 0h2m1 0h4m4 0h5m1 0h1M12 21.5h2m2 0h5m3 0h2M4 22.5h7m6 0h2m1 0h1m1 0h1m1 0h1m1 0h3M4 23.5h1m5 0h1m1 0h2m2 0h2m2 0h1m3 0h2m1 0h1M4 24.5h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h7m1 0h1m1 0h1M4 25.5h1m1 0h3m1 0h1m1 0h1m6 0h1m1 0h2m1 0h5M4 26.5h1m1 0h3m1 0h1m1 0h5m2 0h1m5 0h2m1 0h1M4 27.5h1m5 0h1m4 0h1m2 0h1m1 0h2m1 0h3m2 0h1M4 28.5h7m1 0h2m1 0h1m5 0h8"/></svg>
+
+## unroll
+
+Redirects a Twitter thread to the corresponding Threadreader thread.
+
+```
+https://x.y.workers.dev?https://twitter.com/{username}/status/{id}
+> (HTTP redirect to https://threadreaderapp.com/thread/{id})
+```
+
+## instagram
+
+Returns a page with an Instagram post embedded in it so the post can be viewed
+without logging in.
+
+```
+https://x.y.workers.dev?https://www.instagram.com/p/{POST_ID}/
+> (Page with the Instagram post's embedded view in it)
+```
+
+<h1 align="center">Command Line Utilities</h1>
 
 ## pwned
 
 Checks a password against the [have i been pwned?](https://haveibeenpwned.com/)
 API and returns a boolean indicating if the password has been pwned or not. This
-is a simplified re-implementation of the
+is a simplified implementation of the
 [Pwned Passwords Cloudflare Worker](https://github.com/HaveIBeenPwned/PwnedPasswordsCloudflareWorker).
 
-### Usage
+In bash:
 
-Pass a plaintext password as the entire query string to the endpoint. For
-example, if your Cloudflare Worker domain is
-
-```
-https://x.y.workers.dev
+```bash
+curl https://x.y.workers.dev?hunter2
+> true
 ```
 
-and the password you want to check is
+In PowerShell:
 
+```powershell
+(Invoke-WebRequest https://x.y.workers.dev?hunter2).Content
+> true
 ```
-hunter1
-```
-
-then the final request URL should be
-
-```
-https://x.y.workers.dev?hunter1
-```
-
-## qr
-
-Generates a QR code for the value passed to the endpoint.
-
-### Usage
-
-Same as `proxy`.
 
 ## ip
 
@@ -151,18 +167,16 @@ Returns the requester's IP address. Uses the
 `CF-Connecting-IP` to get this value. Inspired by and works like
 [ifconfig.me](https://ifconfig.me) and [ifconfig.co](https://ifconfig.co).
 
-### Usage
-
 In bash:
 
-```
+```bash
 curl https://x.y.workers.dev
 > <your IP address>
 ```
 
 In PowerShell:
 
-```
+```powershell
 (Invoke-WebRequest https://x.y.workers.dev).Content
 > <your IP address>
 ```
@@ -171,18 +185,16 @@ In PowerShell:
 
 Returns a random version 4 UUID.
 
-### Usage
-
 In bash:
 
-```
+```bash
 curl https://x.y.workers.dev
 > <random v4 UUID>
 ```
 
 In PowerShell:
 
-```
+```powershell
 (Invoke-WebRequest https://x.y.workers.dev).Content
 > <random v4 UUID>
 ```
@@ -192,18 +204,16 @@ In PowerShell:
 Returns the hash of a string using the
 [crypto web API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest).
 
-### Usage
-
 In bash:
 
-```
+```bash
 curl https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21
 > 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
 ```
 
 In PowerShell:
 
-```
+```powershell
 (Invoke-WebRequest https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21).Content
 > 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
 ```
@@ -220,19 +230,3 @@ Supported values are:
 ### `query` (alias `q`)
 
 The string you want to get the hash of.
-
-## style
-
-Reverse proxy which injects a basic CSS style sheet.
-
-### Usage
-
-Same as `proxy`.
-
-## unroll
-
-Redirects a tweet thread to the corresponding Threadreader thread.
-
-### Usage
-
-Same as `proxy`, but only works on tweet URLs.
