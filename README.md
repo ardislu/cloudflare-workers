@@ -149,15 +149,15 @@ is a simplified implementation of the
 In bash:
 
 ```bash
-curl https://x.y.workers.dev?hunter2
-> true
+$ curl https://x.y.workers.dev?hunter2
+true
 ```
 
 In PowerShell:
 
 ```powershell
-(Invoke-WebRequest https://x.y.workers.dev?hunter2).Content
-> true
+PS> (Invoke-WebRequest https://x.y.workers.dev?hunter2).Content
+true
 ```
 
 ## ip
@@ -170,15 +170,15 @@ Returns the requester's IP address. Uses the
 In bash:
 
 ```bash
-curl https://x.y.workers.dev
-> <your IP address>
+$ curl https://x.y.workers.dev
+<your IP address>
 ```
 
 In PowerShell:
 
 ```powershell
-(Invoke-WebRequest https://x.y.workers.dev).Content
-> <your IP address>
+PS> (Invoke-WebRequest https://x.y.workers.dev).Content
+<your IP address>
 ```
 
 ## uuid
@@ -188,15 +188,15 @@ Returns a random version 4 UUID.
 In bash:
 
 ```bash
-curl https://x.y.workers.dev
-> <random v4 UUID>
+$ curl https://x.y.workers.dev
+<random v4 UUID>
 ```
 
 In PowerShell:
 
 ```powershell
-(Invoke-WebRequest https://x.y.workers.dev).Content
-> <random v4 UUID>
+PS> (Invoke-WebRequest https://x.y.workers.dev).Content
+<random v4 UUID>
 ```
 
 ## hash
@@ -207,15 +207,15 @@ Returns the hash of a string using the
 In bash:
 
 ```bash
-curl https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21
-> 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
+$ curl https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21
+315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
 ```
 
 In PowerShell:
 
 ```powershell
-(Invoke-WebRequest https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21).Content
-> 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
+PS> (Invoke-WebRequest https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21).Content
+315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
 ```
 
 ### `algorithm`
