@@ -218,7 +218,7 @@ PS> (Invoke-WebRequest https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%
 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
 ```
 
-### `algorithm`
+### `algorithm` (alias `a`)
 
 Supported values are:
 
