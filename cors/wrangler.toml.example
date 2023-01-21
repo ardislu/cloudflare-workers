@@ -1,4 +1,4 @@
 name = 'cors'
 main = 'index.js'
-compatibility_date = '2022-11-03'
-route = 'example.com/*'
+compatibility_date = '2023-01-20'
+route = { pattern = 'cors.example.com', custom_domain = true }
