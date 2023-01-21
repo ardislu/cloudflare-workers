@@ -1,3 +1,5 @@
+import { decode } from 'html-entities';
+
 class SetBase {
   constructor(origin) {
     this.origin = origin;
@@ -31,7 +33,7 @@ class ReplaceBitcoin {
         .replaceAll('Bitcoin', 'Buttcoin')
         .replaceAll('BITCOIN', 'BUTTCOIN')
         .replaceAll(/bitcoin/gi, 'buttcoin'); // Any other mixed case just become buttcoin
-      text.replace(buttText);
+      text.replace(decode(buttText));
       this.#buffer = '';
     }
     else {
