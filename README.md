@@ -149,6 +149,16 @@ https://x.y.workers.dev?https://www.instagram.com/p/{POST_ID}/
 > (Page with the Instagram post's embedded view in it)
 ```
 
+## archive
+
+Redirects a webpage to the corresponding [archive.ph](https://archive.ph)
+capture. Useful to bypass news article paywalls.
+
+```
+https://x.y.workers.dev?https://example.com
+> (HTTP redirect to https://archive.ph/https://example.com)
+```
+
 <h1 align="center">Command Line Utilities</h1>
 
 ## pwned

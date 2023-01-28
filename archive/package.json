@@ -1,0 +1,19 @@
+{
+  "name": "archive",
+  "version": "0.2.0",
+  "description": "Web utility that automatically sends a webpage to archive.ph.",
+  "license": "ISC",
+  "author": "Ardis Lu",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "publish": "wrangler publish"
+  },
+  "dependencies": {
+    "html-entities": "^2.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardislu/cloudflare-workers.git"
+  }
+}
