@@ -104,6 +104,18 @@ no styling.
 https://x.y.workers.dev?https://site-with-no-styles.example.com
 ```
 
+## buttcoin
+
+Returns a page where all instances of the word "bitcoin" are replaced with
+"buttcoin".
+
+```
+https://x.y.workers.dev?https://en.wikipedia.org/wiki/Bitcoin
+> (See image below)
+```
+
+<img alt="Snippet of the Wikipedia page for 'Bitcoin' but all instances of the word 'bitcoin' are replaced with 'buttcoin'." src="./buttcoin.png">
+
 <h1 align="center">Web Utilities</h1>
 
 ## qr
@@ -136,18 +148,6 @@ without logging in.
 https://x.y.workers.dev?https://www.instagram.com/p/{POST_ID}/
 > (Page with the Instagram post's embedded view in it)
 ```
-
-## buttcoin
-
-Returns a page where all instances of the word "bitcoin" are replaced with
-"buttcoin".
-
-```
-https://x.y.workers.dev?https://en.wikipedia.org/wiki/Bitcoin
-> (See image below)
-```
-
-<img alt="Snippet of the Wikipedia page for 'Bitcoin' but all instances of the word 'bitcoin' are replaced with 'buttcoin'." src="./buttcoin.png">
 
 <h1 align="center">Command Line Utilities</h1>
 
