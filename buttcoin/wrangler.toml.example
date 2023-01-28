@@ -1,4 +1,4 @@
 name = 'buttcoin'
 main = 'index.js'
 compatibility_date = '2023-01-20'
-route = { pattern = 'buttcoin.alu.bz', custom_domain = true }
+route = { pattern = 'buttcoin.example.com', custom_domain = true }
