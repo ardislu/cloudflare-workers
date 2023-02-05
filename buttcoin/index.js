@@ -52,7 +52,7 @@ export default {
       remoteUrl = new URL(queryString);
     }
     catch {
-      return new Response('Invalid URL provided in query string.');
+      return new Response('Invalid URL provided in query string.', { status: 400 });
     }
 
     const response = await fetch(remoteUrl);
