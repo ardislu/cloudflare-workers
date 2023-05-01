@@ -10,7 +10,7 @@
     "publish": "wrangler publish"
   },
   "dependencies": {
-    "qrcode": "^1.5.1"
+    "@paulmillr/qr": "^0.1.1"
   },
   "repository": {
     "type": "git",
