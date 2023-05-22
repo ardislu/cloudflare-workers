@@ -10,7 +10,7 @@
     "publish": "wrangler publish"
   },
   "devDependencies": {
-    "wrangler": "^2.20.0"
+    "wrangler": "^3.0.0"
   },
   "repository": {
     "type": "git",
