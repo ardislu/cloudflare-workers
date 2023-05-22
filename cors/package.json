@@ -1,13 +1,13 @@
 {
   "name": "cors",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "This reverse proxy injects permissive CORS response headers to a response.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "deploy": "wrangler deploy"
   },
   "repository": {
     "type": "git",

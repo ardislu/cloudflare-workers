@@ -31,16 +31,16 @@ npm i
 npm run dev --workspace=[Cloudflare Worker name]
 ```
 
-5. Publish all the Workers to Cloudflare:
+5. Deploy all the Workers to Cloudflare:
 
 ```
-npm run publish --workspaces
+npm run deploy --workspaces
 ```
 
-Or publish an individual Worker:
+Or deploy an individual Worker:
 
 ```
-npm run publish --workspace=[Cloudflare Worker name]
+npm run deploy --workspace=[Cloudflare Worker name]
 ```
 
 # Limitations

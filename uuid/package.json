@@ -1,13 +1,13 @@
 {
   "name": "uuid",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Cloudflare Worker which returns a random version 4 UUID.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "deploy": "wrangler deploy"
   },
   "repository": {
     "type": "git",

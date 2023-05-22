@@ -1,4 +1,4 @@
 name = 'style'
 main = 'index.js'
-compatibility_date = '2023-01-20'
+compatibility_date = '2023-05-21'
 route = { pattern = 'style.example.com', custom_domain = true }

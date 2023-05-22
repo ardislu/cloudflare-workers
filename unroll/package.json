@@ -1,13 +1,13 @@
 {
   "name": "unroll",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Redirects a tweet thread to the corresponding Threadreader thread.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "deploy": "wrangler deploy"
   },
   "repository": {
     "type": "git",

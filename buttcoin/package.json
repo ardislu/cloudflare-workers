@@ -1,13 +1,13 @@
 {
   "name": "buttcoin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Reverse proxy which replaces all instances of the word \"bitcoin\" to \"buttcoin\".",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "html-entities": "^2.3.3"

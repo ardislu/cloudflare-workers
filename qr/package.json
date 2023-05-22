@@ -1,13 +1,13 @@
 {
   "name": "qr",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "QR code generator on a Cloudflare Worker.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@paulmillr/qr": "^0.1.1"

@@ -1,13 +1,13 @@
 {
   "name": "pwned",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "This is a re-implementation of the Pwned Passwords Cloudflare Worker.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "deploy": "wrangler deploy"
   },
   "repository": {
     "type": "git",

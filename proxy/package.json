@@ -1,13 +1,13 @@
 {
   "name": "proxy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "This is a minimal, basic reverse proxy.",
   "license": "ISC",
   "author": "Ardis Lu",
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "deploy": "wrangler deploy"
   },
   "repository": {
     "type": "git",
