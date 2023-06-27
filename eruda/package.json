@@ -1,0 +1,16 @@
+{
+  "name": "eruda",
+  "version": "0.3.0",
+  "description": "Reverse proxy which injects eruda into a webpage.",
+  "license": "ISC",
+  "author": "Ardis Lu",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardislu/cloudflare-workers.git"
+  }
+}

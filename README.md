@@ -116,6 +116,15 @@ https://x.y.workers.dev?https://en.wikipedia.org/wiki/Bitcoin
 
 <img alt="Snippet of the Wikipedia page for 'Bitcoin' but all instances of the word 'bitcoin' are replaced with 'buttcoin'." src="./buttcoin.png">
 
+## eruda
+
+This reverse proxy injects [eruda](https://github.com/liriliri/eruda) into a
+webpage. Good for quickly injecting DevTools into a webpage.
+
+```
+https://x.y.workers.dev?https://example.com
+```
+
 <h1 align="center">Web Utilities</h1>
 
 ## qr
