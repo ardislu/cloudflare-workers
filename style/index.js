@@ -1,6 +1,6 @@
 class InjectStyle {
   element(element) {
-    element.prepend(`<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sakura.css@1.3.1/css/sakura.min.css">`, { html: true });
+    element.prepend(`<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/sakura.css@1.3.1/css/sakura.min.css">`, { html: true });
   }
 }
 
