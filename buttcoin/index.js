@@ -1,25 +1,5 @@
 import { decode } from 'html-entities';
-
-class SetBase {
-  constructor(origin) {
-    this.origin = origin;
-  }
-
-  element(element) {
-    element.prepend(`<base href="${this.origin}" />`, { html: true });
-  }
-}
-
-class UpdateLink {
-  element(element) {
-    for (const attrName of ['href', 'src']) {
-      const attrValue = element.getAttribute(attrName);
-      if (attrValue !== null && attrValue[0] === '/') {
-        element.setAttribute(attrName, attrValue.substring(1));
-      }
-    }
-  }
-}
+import { SetBase, UpdateLink } from '../proxy';
 
 class ReplaceBitcoin {
   #buffer = '';
