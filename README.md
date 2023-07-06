@@ -253,6 +253,7 @@ PS> (Invoke-WebRequest https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%
 
 Supported values are:
 
+- `MD5` (not part of the Web Crypto API but supported by Cloudflare Workers)
 - `SHA-1`
 - `SHA-256`
 - `SHA-384`

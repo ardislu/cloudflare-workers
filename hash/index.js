@@ -7,8 +7,13 @@ export default {
     // Parse URLSearchParams
     for (const [key, value] of url.searchParams) {
       const normalizedKey = key.toLowerCase();
-      if ((normalizedKey === 'a' || normalizedKey === 'algorithm') && /^SHA-?(1|256|384|512)$/i.test(value)) {
-        algorithm = value.includes('-') ? value : `SHA-${value.slice(3)}`; // Insert a '-' character if it's not present; crypto.subtle.digest() requires it.
+      if ((normalizedKey === 'a' || normalizedKey === 'algorithm')) {
+        if (/^SHA-?(1|256|384|512)$/i.test(value)) {
+          algorithm = value.includes('-') ? value : `SHA-${value.slice(3)}`; // Insert a '-' character if it's not present; crypto.subtle.digest() requires it.
+        }
+        else if (value.toUpperCase() === 'MD5') {
+          algorithm = 'MD5';
+        }
       }
       else if ((normalizedKey === 'q' || normalizedKey === 'query') && value) { // Intentionally fail for falsy values because a null or empty string is also invalid
         query = value;
@@ -17,7 +22,7 @@ export default {
 
     // Handling bad params
     if (algorithm === undefined) {
-      return new Response('Invalid algorithm provided. Provide one of the following values for the parameter "a" or "algorithm": SHA-1, SHA-256, SHA-384, or SHA-512.', { status: 400 });
+      return new Response('Invalid algorithm provided. Provide one of the following values for the parameter "a" or "algorithm": MD5, SHA-1, SHA-256, SHA-384, or SHA-512.', { status: 400 });
     }
     else if (query === undefined) {
       return new Response('Invalid query provided. Provide a value for the parameter "q" or "query".', { status: 400 });
