@@ -10,7 +10,7 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "html-entities": "^2.3.3"
+    "html-entities": "^2.4.0"
   },
   "repository": {
     "type": "git",
