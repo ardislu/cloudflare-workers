@@ -114,7 +114,7 @@ https://x.y.workers.dev?https://en.wikipedia.org/wiki/Bitcoin
 > (See image below)
 ```
 
-<img alt="Snippet of the Wikipedia page for 'Bitcoin' but all instances of the word 'bitcoin' are replaced with 'buttcoin'." src="./buttcoin.png">
+<img alt="Snippet of the Wikipedia page for 'Bitcoin' but all instances of the word 'bitcoin' are replaced with 'buttcoin'." src="./.github/buttcoin.png">
 
 ## eruda
 
@@ -137,7 +137,7 @@ https://x.y.workers.dev?https://example.com
 > (The SVG file rendered below)
 ```
 
-<img alt="QR code for https://example.com" src="./qr.svg" height="200px">
+<img alt="QR code for https://example.com" src="./.github/qr.svg" height="200px">
 
 ## unroll
 
