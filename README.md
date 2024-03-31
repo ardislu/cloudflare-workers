@@ -238,21 +238,31 @@ PS> (Invoke-WebRequest https://x.y.workers.dev).Content
 
 ## hash
 
-Returns the hash of a string using the
+Returns the hash of a string or a hexadecimal byte array using the
 [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest).
 
 In bash:
 
 ```bash
-$ curl https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21
+# SHA-256 hash of the string "Hello, world!"
+$ curl "https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21"
 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
+
+# MD5 hash of the literal byte array [00, AA, BB, CC]
+$ curl "https://x.y.workers.dev?algorithm=MD5&hex=00AABBCC"
+CD7409B51FDE80807E2E1532B7432A00
 ```
 
 In PowerShell:
 
 ```powershell
-PS> (Invoke-WebRequest https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21).Content
+# SHA-256 hash of the string "Hello, world!"
+PS> (Invoke-WebRequest "https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21").Content
 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
+
+# MD5 hash of the literal byte array [00, AA, BB, CC]
+PS> (Invoke-WebRequest "https://x.y.workers.dev?algorithm=MD5&hex=00AABBCC").Content
+CD7409B51FDE80807E2E1532B7432A00
 ```
 
 ### `algorithm` (alias `a`)
@@ -268,3 +278,10 @@ Supported values are:
 ### `query` (alias `q`)
 
 The string you want to get the hash of.
+
+### `hex` (alias `h`)
+
+The hexadecimal byte array you want to get the hash of. An optional "0x" prefix
+may be given, the prefix is ignored.
+
+If both `query` and `hex` are provided, `query` will be used.
