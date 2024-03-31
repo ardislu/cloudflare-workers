@@ -104,6 +104,12 @@ no styling.
 https://x.y.workers.dev?https://site-with-no-styles.example.com
 ```
 
+Before (https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
+<img alt="An unstyled page. The body text stretches the entire width of the screen, making it hard to read." src="./.github/style-before.png">
+
+After (https://x.y.workers.dev?https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
+<img alt="A styled version of the previous page. The body text is centered with a max width of about 700px, making a much easier reading experience." src="./.github/style-after.png">
+
 ## buttcoin
 
 Returns a page where all instances of the word "bitcoin" are replaced with
