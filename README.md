@@ -199,8 +199,8 @@ true
 In PowerShell:
 
 ```powershell
-PS> (Invoke-WebRequest https://x.y.workers.dev?hunter2).Content
-true
+PS> irm https://x.y.workers.dev?hunter2
+True
 ```
 
 ## ip
@@ -220,7 +220,7 @@ $ curl https://x.y.workers.dev
 In PowerShell:
 
 ```powershell
-PS> (Invoke-WebRequest https://x.y.workers.dev).Content
+PS> irm https://x.y.workers.dev
 <your IP address>
 ```
 
@@ -238,7 +238,7 @@ $ curl https://x.y.workers.dev
 In PowerShell:
 
 ```powershell
-PS> (Invoke-WebRequest https://x.y.workers.dev).Content
+PS> irm https://x.y.workers.dev
 <random v4 UUID>
 ```
 
@@ -263,11 +263,11 @@ In PowerShell:
 
 ```powershell
 # SHA-256 hash of the string "Hello, world!"
-PS> (Invoke-WebRequest "https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21").Content
+PS> irm "https://x.y.workers.dev?algorithm=SHA-256&query=Hello%2C%20world%21"
 315F5BDB76D078C43B8AC0064E4A0164612B1FCE77C869345BFC94C75894EDD3
 
 # MD5 hash of the literal byte array [00, AA, BB, CC]
-PS> (Invoke-WebRequest "https://x.y.workers.dev?algorithm=MD5&hex=00AABBCC").Content
+PS> irm "https://x.y.workers.dev?algorithm=MD5&hex=00AABBCC"
 CD7409B51FDE80807E2E1532B7432A00
 ```
 
