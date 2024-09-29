@@ -25,6 +25,19 @@ npm i
    [Customize the fields](https://developers.cloudflare.com/workers/wrangler/configuration/)
    as required.
 
+You can use this bash script to quickly make a `wrangler.toml` file from the
+`wrangler.toml.example` file in each folder:
+
+```bash
+find -name '*.example' | xargs -I {} sh -c 'cp -u "$1" "${1%.*}"' -- {}
+```
+
+Or using PowerShell:
+
+```PowerShell
+Get-ChildItem -Recurse -Filter '*.example' | Where-Object { -Not (Test-Path "$($_.DirectoryName)\$($_.BaseName)" -PathType Leaf) } | ForEach-Object { Copy-Item -LiteralPath "$($_.FullName)" -Destination "$($_.DirectoryName)\$($_.BaseName)" }
+```
+
 4. Test that each Cloudflare Worker works:
 
 ```
@@ -107,7 +120,8 @@ https://x.y.workers.dev?https://site-with-no-styles.example.com
 Before (https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
 <img alt="An unstyled page. The body text stretches the entire width of the screen, making it hard to read." src="./.github/style-before.png">
 
-After (https://x.y.workers.dev?https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
+After
+(https://x.y.workers.dev?https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
 <img alt="A styled version of the previous page. The body text is centered with a max width of about 700px, making a much easier reading experience." src="./.github/style-after.png">
 
 ## buttcoin
