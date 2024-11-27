@@ -2,7 +2,7 @@ import { SetBase, UpdateLink } from '../proxy';
 
 class InjectEruda {
   element(element) {
-    element.prepend('<script src="//cdn.jsdelivr.net/npm/eruda@3.0.1/eruda.js" integrity="sha512-iqTxJJyPkonhuLaymGBUWM6x/icdahslHnzOZjrQifaSH+RjA3SGNGhKWboNqhbekZiN63UeorCfIz6XJBD/Fw==" crossorigin></script><script>eruda.init();</script>', { html: true });
+    element.prepend('<script src="//cdn.jsdelivr.net/npm/eruda@3.4.1/eruda.js" integrity="sha512-3h7ROKDcr6JDuNeJM83xKEnx4cqMvii81NQ+9bSOwOTQL6AKhSmp5oVRL1R4rrM6H23CarCgDK3FIFl3ZnZEZA==" crossorigin></script><script>eruda.init();</script>', { html: true });
   }
 }
 
