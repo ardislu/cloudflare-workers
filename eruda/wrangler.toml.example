@@ -1,4 +1,4 @@
 name = 'eruda'
 main = 'index.js'
-compatibility_date = '2023-06-26'
+compatibility_date = '2025-05-23'
 route = { pattern = 'eruda.example.com', custom_domain = true }

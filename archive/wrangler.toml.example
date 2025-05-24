@@ -1,4 +1,4 @@
 name = 'archive'
 main = 'index.js'
-compatibility_date = '2023-05-21'
+compatibility_date = '2025-05-23'
 route = { pattern = 'archive.example.com', custom_domain = true }

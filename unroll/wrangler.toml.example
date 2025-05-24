@@ -1,4 +1,4 @@
 name = 'unroll'
 main = 'index.js'
-compatibility_date = '2023-05-21'
+compatibility_date = '2025-05-23'
 route = { pattern = 'unroll.example.com', custom_domain = true }

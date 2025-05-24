@@ -1,4 +1,4 @@
 name = 'pwned'
 main = 'index.js'
-compatibility_date = '2023-05-21'
+compatibility_date = '2025-05-23'
 route = { pattern = 'pwned.example.com', custom_domain = true }
