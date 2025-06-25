@@ -2,7 +2,7 @@ import { SetBase, UpdateLink } from '../proxy';
 
 class InjectStyle {
   element(element) {
-    element.prepend(`<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sakura.css@1.5.0/css/sakura.min.css">`, { html: true });
+    element.prepend(`<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sakura.css@1.5.1/css/sakura.min.css">`, { html: true });
   }
 }
 
