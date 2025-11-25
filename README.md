@@ -6,6 +6,11 @@ Uses [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) (npm
 version 7+) to manage multiple `package.json` files (a separate package is
 required for each Cloudflare Worker).
 
+Code repository mirrors:
+[GitHub](https://github.com/ardislu/cloudflare-workers),
+[Codeberg](https://codeberg.org/ardislu/cloudflare-workers),
+[git.ardis.lu](https://git.ardis.lu/cloudflare-workers)
+
 # Quickstart
 
 1. Clone this repo
