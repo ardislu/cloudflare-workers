@@ -10,7 +10,7 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@paulmillr/qr": "^0.3.0"
+    "qr": "^0.6.0"
   },
   "repository": {
     "type": "git",

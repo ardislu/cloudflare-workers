@@ -1,4 +1,4 @@
-import writeQR from '@paulmillr/qr';
+import writeQR from 'qr';
 
 export default {
   async fetch(request) {
