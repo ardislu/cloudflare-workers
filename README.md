@@ -197,7 +197,8 @@ https://x.y.workers.dev?https://example.com
 
 ## pwned
 
-> [!CAUTION]<br> The underlying Pwned Passwords API used in this worker uses a
+> [!CAUTION]
+> The underlying Pwned Passwords API used in this worker uses a
 > [_k_-anonymity model](https://en.wikipedia.org/wiki/K-anonymity) to preserve
 > your privacy. This worker negates that benefit. This worker should only be
 > referenced for education, not actually used in a production backend.<br><br>
