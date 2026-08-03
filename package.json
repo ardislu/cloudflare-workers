@@ -10,7 +10,7 @@
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
-    "wrangler": "^4.113.0"
+    "wrangler": "^4.114.0"
   },
   "repository": {
     "type": "git",
