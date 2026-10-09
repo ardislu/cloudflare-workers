@@ -1,7 +1,25 @@
+const BLOCKED_HOSTS = /^(localhost|127\.|0\.|10\.|169\.254\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|\[?::1\]?|\[?fc00:|\[?fe80:)/i;
+
+function isSafeTarget(target) {
+  let parsed;
+  try {
+    parsed = new URL(target);
+  } catch {
+    return false;
+  }
+  if (!/^https?:$/i.test(parsed.protocol)) return false;
+  if (BLOCKED_HOSTS.test(parsed.hostname)) return false;
+  return true;
+}
+
 export default {
   async fetch(request) {
     const url = /^http(s)?:\/\//i.test(request.url) ? new URL(request.url) : new URL(`https://${request.url}`);
     const queryString = decodeURIComponent(url.search.substring(1));
+
+    if (request.method !== 'OPTIONS' && !isSafeTarget(queryString)) {
+      return new Response('Invalid or disallowed target URL', { status: 400 });
+    }
 
     let response;
     if (request.method === 'OPTIONS') {
